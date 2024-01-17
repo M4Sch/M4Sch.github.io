@@ -1,0 +1,23 @@
+:root {
+    --primary-one: #202e44;
+    --neutral-one: #f2f2eb;
+    --primary-two: #a9bbc8;
+    --neutral-two: #c7bcab;
+    --accent: #8b734c;
+}
+
+:root {
+    --background: #4c5867;
+    --light-accent: #627184;
+    --light-one: #f0f2f4;
+    --light-two: #e2e5e9;
+    --light-three: #d3d8de;
+    --dark-accent: #363f49;
+    --colour-accent-one: #8884cd;
+    --colour-accent-two: #41a9b0;
+
+    --catnip: #fff59b;
+    --chairymadness: #fff160;
+    --wizard: #070013;
+    --hildeguard: white;
+}

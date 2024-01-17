@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8">
+        <title>
+            Mara Schmid - Home
+        </title>
+        <link rel="icon" href="profile_pic.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "color_names.css">
+        <link rel = "stylesheet" href = "stylesheet.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul style="height:fit-content; margin: auto;">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <div class = "box1" style="margin-top: 5em;">
+            <div class="imageelement" style="margin: auto;">
+                <img src="profile_pic.svg" alt="AluminumAlloy's Profile Picture" width="100%" height="100%">
+            </div>
+            <div class="textelement">
+                <h1>Mara Schmid</h1>
+                <p style="text-align: left;">
+                    I am a game programmer with proficiency in various programming languages and game development frameworks.
+                </p>
+                <p style="text-align: left;">
+                    Currently studying Multimedia Technology at Salzburg University of Applied Sciences, 
+                    I've developed a portfolio showcasing the games I have contributed to.
+                </p>
+                <p style="text-align: left;">
+                    With a good foundation in programming languages and practical experience with industry-standard engines, 
+                    I am seeking opportunities to contribute my technical skills to impactful game development projects.
+                </p>
+            </div>
+        </div>
+            
+        <div class="borderedbox" style="margin: auto; margin-top: 30px;">
+            <div class="skills">
+                <h2>Skills</h2>
+                <div class="sliderparent" id="skillsliders">
+                </div>
+            </div>
+        </div>
+
+        <div class="headerseperator">
+            <h1>my projects so far:</h1>
+        </div>
+        <div class="portfolio">
+            <div href="https://portfolio.fh-salzburg.ac.at/projects/2022-catnip" class="borderedbox">
+                <h2>Catnip</h2>
+                <div style="background-color: var(--catnip);">
+                    <img src="projects\catnip\Catnip_A2_small.png" alt="Poster of my pixelart game Catnip">
+                </div>
+                <div class="darkbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2022-catnip">FH-Portfolio Page</a></div>
+            </div>
+            <div class="borderedbox">
+                <h2>Chairy Madness</h2>
+                <div style="background-color: var(--chairymadness);">
+                    <img src="projects\chairy_madness\chairy_madness_tower.jpeg" alt="Logo of the pixelart game Chairy Madness">
+                </div>
+                <div class="darkbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2023-chairy-madness">FH-Portfolio Page</a></div>
+            </div>
+            <div class="borderedbox">
+                <h2>Pan-Tastic Wizard Adventures</h2>
+                <div style="background-color: var(--wizard);">
+                    <img src="projects\wizard_pan\wizard_thumbnail.png" alt="Image of pixelart of a small wizard holding a pan">
+                </div>
+                <div class="darkbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2023-pan-tastic-wizard-adventures">FH-Portfolio Page</a></div>
+            </div>
+            <div class="borderedbox">
+                <h2>Hildeguard</h2>
+                <div style="background-color: var(--hildeguard);">
+                    <img src="projects\hildeguard\Hildeguard_Icon.png" alt="Logo of the game Hildeguard">
+                </div>
+                <div class="darkbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2023-hildeguard-monastery-madness">FH-Portfolio Page</a></div>
+            </div>
+        </div>
+
+        <div style="background-color: var(--dark-accent); position: relative; bottom: 0px; width: 100vw; height: 250px; margin-top: 150px;">
+            <h1 style="padding-top: 20px;">Where to find me:</h1>
+            <div style="display: flex; width: fit-content; margin: auto;">
+                <a href="https://github.com/M4Sch" class="fa fa-github"></a>
+                <a href="mailto:mara.schmid@gmx.at" class="fa fa-envelope"></a>
+            </div>
+        </div>
+
+        <script>
+            var skills = [];
+            skills.push(["C#", 90]);
+            skills.push(["C++", 70]);
+            skills.push(["Python", 75]);
+            skills.push(["Actionscript", 60]);
+            skills.push(["HTML", 75]);
+            skills.push(["CSS", 75]);
+            skills.push(["Unity", 90]);
+            skills.push(["Godot", 80]);
+            skills.push(["Unreal Engine", 70]);
+
+            skills.forEach(skill => {
+                filledBar(skill[0], skill[1], "100%", "skillsliders")
+            });
+
+            function filledBar(name, percent, width, parent) {
+                document.getElementById(parent).innerHTML +=
+                "<p style=\"grid-column: 1; width: fit-content; margin: auto; margin-right: 1em;\">"+ name +"</p>"+
+                "    <div style=\"grid-column: 2;\">"+
+                "        <svg width=\""+ width +"\" height=\"30px\" style=\"margin: 10px; display: block;\">"+
+                "            <defs> "+
+                "                <linearGradient id=\"linear-gradient\" x2=\"1\" y2=\"0\" gradientUnits=\"objectBoundingBox\">"+
+                "                    <stop offset=\"0\" stop-color=\"var(--colour-accent-one)\"/>"+
+                "                    <stop offset=\"1\" stop-color=\"var(--colour-accent-two)\"/>"+
+                "                </linearGradient>"+
+                "            </defs>"+
+                "            <rect class=\"slider\" width=\"100%\" height=\"100%\" rx=\"15px\"/>"+
+                "            <rect class=\"sliderinner\" width=\""+ percent +"%\" height=\"100%\" rx=\"15px\" fill=\"url(#linear-gradient)\"/>"+
+                "        </svg>"+
+                "    </div>"
+            }
+        </script>
+    </body>
+</html>

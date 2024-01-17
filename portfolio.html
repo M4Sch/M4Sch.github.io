@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            Mara Schmid - Portfolio
+        </title>
+        <link rel="icon" href="profile_pic.svg">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel = "stylesheet" href = "stylesheet.css">
+        <link rel = "stylesheet" href = "color_names.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <ul style="height:fit-content; margin: auto;">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            </ul>
+        </nav>
+
+        <h1 style="text-align: center; margin-top: 2.5em; margin-bottom: 1em; font-size: 40px;">Welcome to my Portfolio!</h1>
+        <div class="games">
+            <div class="borderedbox">
+                <div>
+                    <div class="infotext">
+                        <h2>Catnip</h2>
+                        <p>My first game ever, written in C#, using the library SFML.</p>
+                        <p>The Assets except for the font were created by me.</p>
+                        <p>
+                            The game is a 2D platformer where the player earns points by shoving objects off of furniture. 
+                            Some things give a higher score, but there is a time penalty for those objects.
+                        </p>
+                        <div class="colorbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2022-catnip">FH-Portfolio Page</a></div>
+                    </div>
+                    <div class="gameimage"  id="catniphero">
+                        <img src="projects\catnip\Catnip_A2_small.png" alt="Poster of my pixelart game Catnip">
+                    </div>
+                    <h3>Impressions from the game:</h3>
+                    <div class="imagecontainer" id="catnip_impressions">
+                    </div>
+                </div>
+            </div>
+
+            <div class="borderedbox">
+                <div>
+                    <div class="infotext">
+                        <h2>Chairy Madness</h2>
+                        <p>My second game, written in C++, again using SFML.</p>
+                        <p>The Assets except for the font were created by me, the code is by me and a colleague of mine.</p>
+                        <p>
+                            This game is a local multiplayer game where two players compete against eachother by stacking chairs.
+                            Players take turns swinging and throwing chairs, trying to create a tower and always stacking higher than their competitor.
+                        </p>
+                        <div class="colorbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2023-chairy-madness">FH-Portfolio Page</a></div>
+                    </div>
+                    <div class="gameimage" id="chairlogo">
+                        <img src="projects\chairy_madness\Logo_Long.png" alt="Logo of the pixelart game Chairy Madness">
+                    </div>
+                    <h3>Impressions from the game:</h3>
+                    <div class="imagecontainer" id="chairymadness_impressions">
+                    </div>
+                </div>
+            </div>
+
+            <div class="borderedbox">
+                <div>
+                    <div class="infotext">
+                        <h2>Pan-Tastic Wizard Adventures</h2>
+                        <p>This game is made with Unity, so the Scripts are written in C#.</p>
+                        <p>The Assets except for the font and the environment were created by me, the code is by me and two colleagues.</p>
+                        <p>
+                            In this 2D platformer, a player is a small wizard who casts spells by combining collected ingredients in a pan.
+                            Different ingredients have different effects. Spell effects are determined by the position the ingredient is in.
+                            The effects are damage type, flight trajectory and number of projectiles that can be shot when cast one time.
+                        </p>
+                        <div class="colorbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2023-pan-tastic-wizard-adventures">FH-Portfolio Page</a></div>
+                    </div>
+                    <div class="gameimage" id="panwizardhero">
+                        <img src="projects\wizard_pan\wizard_thumbnail.png" alt="Image of pixelart of a small wizard holding a pan">
+                    </div>
+                    <h3>Impressions from the game:</h3>
+                    <div class="imagecontainer" id="wizardwithapan_impressions">
+                    </div>
+                </div>
+            </div>
+
+            <div class="borderedbox">
+                <div>
+                    <div class="infotext">
+                        <h2>Hildeguard</h2>
+                        <p>This game is made with Godot, with C# for scripts.</p>
+                        <p>This project is made in a team with artists, and two programmers.</p>
+                        <p>Hildeguard is a 3D tower defense game.</p>
+                        <div class="colorbutton"><a href="https://portfolio.fh-salzburg.ac.at/projects/2023-hildeguard-monastery-madness">FH-Portfolio Page</a></div>
+                    </div>
+                    <div class="gameimage" id="hildeguardhero">
+                        <img src="projects\hildeguard\Hildeguard_Icon.png" alt="Logo of the game Hildeguard">
+                    </div>
+                    <h3>Impressions from the game:</h3>
+                    <div class="imagecontainer" id="hildeguard_impressions">
+                        <div>
+                            <p>There are no images of the game yet.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background-color: var(--dark-accent); position: relative; bottom: 0px; width: 100vw; height: 250px; margin-top: 150px;">
+            <h1 style="padding-top: 20px;">Where to find me:</h1>
+            <div style="display: flex; width: fit-content; margin: auto;">
+                <a href="https://github.com/M4Sch" class="fa fa-github"></a>
+                <a href="mailto:mara.schmid@gmx.at" class="fa fa-envelope"></a>
+            </div>
+        </div>
+
+        <script>
+            var catnipImpressions = [];
+            catnipImpressions.push(['projects\\catnip\\catnip_controls.jpeg','the game controls']);
+            catnipImpressions.push(['projects\\catnip\\catnip_gameplay.jpeg','the gameplay']);
+            catnipImpressions.push(['projects\\catnip\\catnip_main_menu.jpeg','the main menu of the game']);
+
+            var chairyMadnessImpressions = [];
+            chairyMadnessImpressions.push(['projects\\chairy_madness\\chairy_madness_coin.jpeg','the coin toss at the beginning of the game']);
+            chairyMadnessImpressions.push(['projects\\chairy_madness\\chairy_madness_credits.jpeg','the game credits']);
+            chairyMadnessImpressions.push(['projects\\chairy_madness\\chairy_madness_throw.jpeg','a chair being thrown']);
+            chairyMadnessImpressions.push(['projects\\chairy_madness\\chairy_madness_tower.jpeg','a tower during the game']);
+            chairyMadnessImpressions.push(['projects\\chairy_madness\\chairy_madness_win.jpeg','the winning screen of the game']);
+
+            var panWizardImpressions = [];
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_cast_spell.gif','casting a spell with three spell components']);
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_harvest_flora.gif','harvesting materials for casting spells']);
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_player_cast_hearts.png','casting a spell']);
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_player_casting.png','player above an enemy']);
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_player_moongrass.png','collecting materials from the map']);
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_player_vs_basilisk_parry.png','the biggest enemy of the level']);
+            panWizardImpressions.push(['projects\\wizard_pan\\wizard_with_pan_wizard-idle.gif','idle animation']);
+
+            var hildeguardImpressions = [];
+
+            var games = [[catnipImpressions, 'catnip'],
+            [chairyMadnessImpressions, 'chairymadness'],
+            [panWizardImpressions, 'wizardwithapan']];
+
+            for (let j = 0; j < games.length; j++) {
+                for (let i = 0; i < games[j][0].length; i++) {
+                    source = games[j][0][i][0];
+                    title = games[j][0][i][1];
+                    document.getElementById(games[j][1]+'_impressions').innerHTML +=
+                    "<div><img src="+source+" alt=\"image of "+title+"\"><p>"+title+"</p></div>";
+                }
+            }
+        </script>
+    </body>
+</html>
