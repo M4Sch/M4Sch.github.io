@@ -6,7 +6,7 @@ h1 {
     font-size: 2.5em;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
     .imageelement {
         margin: auto;
         padding: 30px;
@@ -58,7 +58,7 @@ h1 {
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
     .box1 {
         display: grid;
     }
@@ -397,7 +397,11 @@ li {
     background-color: var(--dark-accent);
     text-align: center;
 }
-.borderedbox > .darkbutton:link, :visited{
+.borderedbox > .darkbutton :link{
+    color: var(--light-one);
+    text-decoration: none;
+}
+.borderedbox > .darkbutton :visited{
     color: var(--light-one);
     text-decoration: none;
 }
@@ -419,5 +423,5 @@ li {
 
 .skills {
     text-align: center;
-    width: 90vw;
+    max-width: (40vw, 100%);
 }
