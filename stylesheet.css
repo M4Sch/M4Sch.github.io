@@ -53,10 +53,8 @@ h1 {
         margin: auto;
     }
 
-    .portfolio {
-        > div {
-            min-width: 90vw;
-        }
+    .portfolio > div {
+        width: 90vw;
     }
 }
 
@@ -68,7 +66,6 @@ h1 {
         grid-column: 1;
         margin: auto;
         padding: 30px;
-        size: 100px;
     }
     .games > div > div > .infotext{
         grid-column: 1;
@@ -108,6 +105,9 @@ h1 {
     #catniphero{
         margin: 40px 40px auto auto;
     }
+    #catniphero > img {
+        width: 20em;
+    }
     #chairlogo{
         margin-left: auto;
         margin-right: 10em;
@@ -115,23 +115,19 @@ h1 {
     }
     #panwizardhero{
         margin: 40px 40px auto auto;
-
-        > img {
-            max-width: 30em;
-        }
+    }
+    #panwizardhero> img {
+        width: 25em;
     }
     #hildeguardhero {
         margin: 40px 40px auto auto;
-        > img {
-            max-width: 30em;
-        }
+    }
+    #hildeguardhero > img {
+        width: 25em;
     }
 
-    .portfolio {
-        > div {
-            max-width: 10cm;
-            min-width: 8cm;
-        }
+    .portfolio > div {
+        width: 8cm;
     }
 }
 
@@ -167,10 +163,9 @@ h1 {
 
 .games div .infotext{
     max-width: 40em;
-
-    > h2 {
-        font-size: 2em;
-    }
+}
+.games div .infotext > h2 {
+    font-size: 2em;
 }
 
 html {
@@ -244,12 +239,11 @@ li {
     height: min-content;
     background: var(--dark-accent);
     border-radius: 50%;
-
-    > img {
-        border-radius: 20%;
-        width: 200px;
-        margin: auto;
-    }
+}
+.imageelement> img {
+    border-radius: 20%;
+    width: 200px;
+    margin: auto;
 }
 
 .textelement {
@@ -322,24 +316,22 @@ li {
     height: fit-content;
     margin: 10px;
     border-radius: 25px;
-
-    > div {
-        background-color: var(--background);
-        height: fit-content;
-        padding: 5px;
-        border-radius: 20px;
-        min-width: min-content;
-    }
+}
+.borderedbox > div {
+    background-color: var(--background);
+    height: fit-content;
+    padding: 5px;
+    border-radius: 20px;
+    min-width: min-content;
 }
 
 .portfolio {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-
-    > div {
-        max-width: 10cm;
-    }
+}
+.portfolio > div {
+    max-width: 10cm;
 }
 
 .portfolio > div > div > img {
@@ -355,10 +347,9 @@ li {
     grid-template-columns: max-content;
     margin: auto;
     margin-bottom: 30px;
-
-    .slider {
-        fill: var(--dark-accent);
-    }
+}
+.sliderparent .slider {
+    fill: var(--dark-accent);
 }
 
 .colorbutton {
@@ -377,10 +368,10 @@ li {
     border: none;
     background-size: 120% auto;
     background-image: linear-gradient(90deg, var(--colour-accent-one) 0%, var(--colour-accent-two) 75%);
-    :link, :visited{
-        color: var(--light-one);
-        text-decoration: none;
-    }
+}
+.colorbutton :link, :visited{
+    color: var(--light-one);
+    text-decoration: none;
 }
 .colorbutton:hover {
     background-position: right center;
@@ -405,10 +396,10 @@ li {
     background-size: 120% auto;
     background-color: var(--dark-accent);
     text-align: center;
-    :link, :visited{
-        color: var(--light-one);
-        text-decoration: none;
-    }
+}
+.borderedbox > .darkbutton:link, :visited{
+    color: var(--light-one);
+    text-decoration: none;
 }
 .borderedbox > .darkbutton:hover {
     background-color: var(--light-accent);
