@@ -1,23 +1,60 @@
 :root {
-    --primary-one: #202e44;
-    --neutral-one: #f2f2eb;
-    --primary-two: #a9bbc8;
-    --neutral-two: #c7bcab;
-    --accent: #8b734c;
-}
+    --colour-accent-one: #eb9317;
+    --colour-accent-two: #cd2f8e;
+    --hover-colour-header: #ffffff;
+    --hover-colour-one: #ffe1b7;
+    --hover-colour-two: #ffd5ef;
+    --hover-shadow-one: #cdb5844d;
+    --hover-shadow-two: #b041984d;
+    --background-dark: #18181a;
+    --background-dark-transparent: #18181a99;
+    --background-light: #242426;
+    --text-color: #e0e0e0;
 
-:root {
-    --background: #4c5867;
-    --light-accent: #627184;
-    --light-one: #f0f2f4;
-    --light-two: #e2e5e9;
-    --light-three: #d3d8de;
-    --dark-accent: #363f49;
-    --colour-accent-one: #8884cd;
+    /*--colour-accent-one: #8884cd;
     --colour-accent-two: #41a9b0;
+    --hover-colour-one: #ffffff;
+    --hover-colour-two: #bbbbbb;*/
 
-    --catnip: #fff59b;
-    --chairymadness: #fff160;
-    --wizard: #070013;
-    --hildeguard: white;
+    /* --colour-accent-one: #56ab2f;
+    --colour-accent-two: #a8e063; */
+
+    /* --colour-accent-one: #D38312;
+    --colour-accent-two: #A83279; */
+
+    /* --colour-accent-one: #70e1f5;
+    --colour-accent-two: #ffd194; */
+
+    /* --colour-accent-one: #556270;
+    --colour-accent-two: #ff6b6b; */
+
+    /* --colour-accent-one: #9d50bb;
+    --colour-accent-two: #6e48aa; */
+
+    /* --colour-accent-one: #fbd3e9;
+    --colour-accent-two: #bb377d; */
+
+    /* --colour-accent-one: #606c88;
+    --colour-accent-two: #3f4c6b; */
+
+    /* --colour-accent-one: #b993d6;
+    --colour-accent-two: #8ca6db; */
+
+    /* --colour-accent-one: #4b6cb7;
+    --colour-accent-two: #182848; */
+
+    /* --colour-accent-one: #c04848;
+    --colour-accent-two: #480048; */
+
+    /* --colour-accent-one: #283048;
+    --colour-accent-two: #859398; */
+
+    /* --colour-accent-one: #3d7eaa;
+    --colour-accent-two: #ffe47a; */
+
+    /* --colour-accent-one: #134e5e;
+    --colour-accent-two: #71b280; */
+
+    /* --colour-accent-one: #4776e6;
+    --colour-accent-two: #8e54e9; */
 }
