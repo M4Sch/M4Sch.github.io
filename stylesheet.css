@@ -63,6 +63,8 @@ h2 {
 .projectscontainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .project {
     max-width: 400px;
@@ -137,6 +139,8 @@ h2 {
 .skillcontainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .skillcontainer div {
     width: 50px;
@@ -167,6 +171,8 @@ h2 {
 .contactcontainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .contactcontainer svg {
     margin-right: 40px;
