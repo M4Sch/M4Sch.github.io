@@ -175,7 +175,7 @@ h2 {
     align-items: center;
 }
 .contactcontainer svg {
-    margin-right: 40px;
+    margin: 20px;
     display: flex;
 }
 svg path {
