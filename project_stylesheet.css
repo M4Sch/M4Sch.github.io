@@ -89,6 +89,7 @@ h1 {
     background-color: var(--colour-accent-two);
 }
 h2 {
+    margin-top: 5vh;
     color: #ddd;
     border-bottom: 2px solid;
     border-image: linear-gradient(to right, var(--colour-accent-one), var(--colour-accent-two)) 1;
