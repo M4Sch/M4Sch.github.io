@@ -67,7 +67,7 @@ h2 {
     border: 2px solid;
     border-image: var(--light-color-gradient) 1;
     background: var(--color-gradient);
-    mask-image: linear-gradient(90deg, #ffffff00, #ffffffff, #ffffff00);
+    mask-image: linear-gradient(90deg,#ffffff00,#ffffff55,#ffffffff,#ffffffff,#ffffff55,#ffffff00);
 }
 .projectscontainer {
     display: flex;
@@ -119,7 +119,7 @@ h2 {
     color: #bbb;
 }
 .project:hover p {
-    background: /*var(--light-color-gradient)*/ #fffffff2;
+    background: var(--text-color-ight);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -191,8 +191,8 @@ h2 {
     width: 50px;
     height: 50px;
     background-color: var(--background-light);
-    border-radius: 20px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 5px;
     margin: 10px;
     display: block;
     text-decoration: none;
@@ -203,10 +203,33 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.contactcontainer div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:  var(--color-gradient);
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.contactcontainer div:hover::before {
+    opacity: 1;
 }
 .contactcontainer div:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 20px var(--hover-shadow-one), 0 4px 20px var(--hover-shadow-two);
+}
+.contactcontainer div:hover svg path {
+    fill: var(--text-color-ight);
 }
 .contactcontainer div svg {
     margin: auto;
