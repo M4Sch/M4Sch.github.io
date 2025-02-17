@@ -1,5 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background-color: var(--background-dark);
     color: var(--text-color);
     margin: 0;
@@ -36,7 +37,7 @@ header {
 h1 {
     font-size: 3em;
     margin-bottom: 0;
-    background: linear-gradient(45deg, var(--colour-accent-one), var(--colour-accent-two));
+    background: var(--light-color-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -57,8 +58,16 @@ section {
 h2 {
     color: #ddd;
     border-bottom: 2px solid;
-    border-image: linear-gradient(to right, var(--colour-accent-one), var(--colour-accent-two)) 1;
+    border-image: var(--color-gradient) 1;
     padding-bottom: 10px;
+}
+.projecttype {
+    color: #ddd;
+    text-align: center;
+    border: 2px solid;
+    border-image: var(--light-color-gradient) 1;
+    background: var(--color-gradient);
+    mask-image: linear-gradient(90deg, #ffffff00, #ffffffff, #ffffff00);
 }
 .projectscontainer {
     display: flex;
@@ -87,7 +96,7 @@ h2 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, var(--colour-accent-one), var(--colour-accent-two));
+    background:  var(--color-gradient);
     z-index: -1;
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
@@ -110,7 +119,7 @@ h2 {
     color: #bbb;
 }
 .project:hover p {
-    background: linear-gradient(45deg, var(--hover-colour-one), var(--hover-colour-two));
+    background: /*var(--light-color-gradient)*/ #fffffff2;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -159,9 +168,13 @@ h2 {
     justify-content: center;
     align-items: center;
 }
+.skillcontainer div:hover {
+    /*transform: translateY(-5px);*/
+    box-shadow: 0 4px 20px var(--hover-shadow-one), 0 4px 20px var(--hover-shadow-two);
+}
 .skillcontainer div p {
     font-size: 20px;
-    background: linear-gradient(45deg, var(--colour-accent-one), var(--colour-accent-two));
+    background: var(--color-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -174,12 +187,33 @@ h2 {
     justify-content: center;
     align-items: center;
 }
-.contactcontainer svg {
-    margin: 20px;
+.contactcontainer div {
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-light);
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactcontainer div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px var(--hover-shadow-one), 0 4px 20px var(--hover-shadow-two);
+}
+.contactcontainer div svg {
+    margin: auto;
     display: flex;
 }
 svg path {
-    fill:url(#grad5);
+    fill:url(#svg_gradient);
   }
 footer {
     margin-top: 10vh;
@@ -197,7 +231,7 @@ footer::before {
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(to right, var(--colour-accent-one), var(--colour-accent-two));
+    background: var(--color-gradient);
 }
 a:link {
     color: var(--colour-accent-one);
