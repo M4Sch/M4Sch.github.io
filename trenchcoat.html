@@ -10,7 +10,17 @@
 </head>
 <body>
     <header>
-        <h1>Trenchc(o)at</h1>
+        <div class="header_items">
+            <div>
+                <a href="pumpkins.html" class="back-link" style="float: left;">&#8592; Prev Project</a>
+            </div>
+            <div>
+                <h1>Trenchc(o)at</h1>
+            </div>
+            <div>
+                <a href="catnip.html" class="back-link" style="float: right;">Next Project &#8594;</a>
+            </div>
+        </div>
         <div id="particles-js">
     </header>
     <main>
@@ -36,8 +46,14 @@
                         <img src="./projects/Trenchcoat/Trenchcoat_Ending.png" alt="Trenchcoat good ending">
                     </div>
                 </div>
-                <a href="#" class="carousel-control prev" aria-label="Previous screenshot">&lt;</a>
-                <a href="#" class="carousel-control next" aria-label="Next screenshot">&gt;</a>
+                <svg height="60" width="50" class="carousel-control prev" xmlns:xlink="#">
+                    <a xlink:href="#" aria-label="Previous screenshot"></a>
+                    <polygon points="45,5 5,30 45,55"/>
+                </svg>
+                <svg height="60" width="50" class="carousel-control next" xmlns:xlink="#">
+                    <a xlink:href="#" aria-label="Next screenshot"></a>
+                    <polygon points="5,5 45,30 5,55"/>
+                </svg>
             </div>
             <h2>About the Project</h2>
             <p>

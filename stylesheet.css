@@ -63,11 +63,13 @@ h2 {
 }
 .projecttype {
     color: #ddd;
+    font-weight: 600;
+    margin: 20px auto 10px auto;
+    max-width: 400px;
     text-align: center;
-    border: 2px solid;
+    border-bottom:  2px solid;
     border-image: var(--light-color-gradient) 1;
-    background: var(--color-gradient);
-    mask-image: linear-gradient(90deg,#ffffff00,#ffffff55,#ffffffff,#ffffffff,#ffffff55,#ffffff00);
+    mask-image: linear-gradient(90deg,#ffffff00,#ffffff55,#ffffffff,#ffffffff,#ffffffff,#ffffffff,#ffffff55,#ffffff00);
 }
 .projectscontainer {
     display: flex;
