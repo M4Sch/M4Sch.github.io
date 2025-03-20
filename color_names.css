@@ -9,8 +9,17 @@
     --background-dark: #18181a;
     --background-dark-transparent: #18181a99;
     --background-light: #242426;
+    --background-lighter: #2c2c2e;
     --text-color: #e0e0e0;
+    --text-color-translucent: #e0e0e083;
     --text-color-ight: #fffffff2;
+
+    --icon-size-small: 35px;
+    --icon-size-medium: 40px;
+    --icon-size-large: 55px;
+    --border-radius-sharp: 5px;
+    --border-radius-round: 15px;
+    --transition-speed: 0.3s;
     
     /*--colour-accent-one: #75aded;
     --colour-accent-two: #FFB7D7;
@@ -138,9 +147,20 @@
     --hover-shadow-two: #3e42944d;
 
     
+    --colour-accent-one: #15FFDF;
+    --colour-accent-two: #1582FF;
+    --colour-accent-three: #3F0CB5;
+    --hover-colour-one: #15FFDF;
+    --hover-colour-two: #1582FF;
+    --hover-colour-three: #3F0CB5;
+    --hover-shadow-one: #15ffe083;
+    --hover-shadow-two: #1582FF83;
+    --hover-shadow-three: #3F0CB583;
+
+
     --color-gradient: linear-gradient(135deg, var(--colour-accent-one), var(--colour-accent-two), var(--colour-accent-three));
     --light-color-gradient: linear-gradient(135deg, var(--hover-colour-one), var(--hover-colour-two), var(--hover-colour-three));
-
+    --color-gradient-dark: linear-gradient(135deg, var(--hover-shadow-one), var(--hover-shadow-two), var(--hover-shadow-three));
 
     /*--colour-accent-one: #fdd700;
     --colour-accent-two: #ff8b17;

@@ -1,5 +1,6 @@
 body {
     font-family: 'Arial', sans-serif;
+    font-family: 'Courier New';
     background-color: var(--background-dark);
     color: var(--text-color);
     margin: 0;
@@ -7,15 +8,66 @@ body {
     line-height: 1.6;
 }
 header {
-    background: var(--background-light);
+    background: var(--color-gradient-dark);
     padding: 20px;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 .header_items {
-    display: grid; 
-    grid-template-columns: auto max-content auto;
+    display: grid;
+}
+.header_items .prevbtn a
+{
+    float: left;
+}
+.header_items .nextbtn a
+{
+    float: right;
+}
+.header_items .projectname
+{
+    text-align: center;
+}
+@media (min-width: 600px)
+{
+    .header_items {
+        display: grid; 
+        grid-template-columns: auto max-content auto;
+    }
+    .header_items .prevbtn
+    {
+        grid-column: 1;
+    }
+    .header_items .nextbtn
+    {
+        grid-column: 3;
+    }
+    .header_items .projectname
+    {
+        grid-column: 2;
+    }
+}
+@media (max-width: 600px)
+{
+    .header_items {
+        display: grid; 
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+    }
+    .header_items .prevbtn
+    {
+        grid-column: 1;
+    }
+    .header_items .nextbtn
+    {
+        grid-column: 2;
+    }
+    .header_items .projectname
+    {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
 }
 #particles-js {
     position: fixed;
@@ -47,11 +99,7 @@ main {
     padding: 20px;
 }
 h1 {
-    color: #ffffff;
-    background:  var(--color-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-color-ight);
 }
 .carousel {
     position: relative;
@@ -88,7 +136,7 @@ h1 {
     filter: drop-shadow(0 0px 20px black);
     
     stroke: var(--text-color-ight);
-    stroke-width: 5px;
+    stroke-width: 3px;
     stroke-linejoin: none;
     paint-order: fill;
 }
@@ -100,17 +148,13 @@ h1 {
 }
 .carousel-control.prev {
     left: 10px;
-    fill: var(--colour-accent-one);
-    fill: var(--text-color-ight);
-    stroke: var(--hover-shadow-one);
-    stroke: none;
+    fill: var(--text-color-translucent);
+    stroke: var(--text-color-ight);
 }
 .carousel-control.next {
     right: 10px;
-    fill: var(--colour-accent-two);
-    fill: var(--text-color-ight);
-    stroke: var(--hover-shadow-two);
-    stroke: none;
+    fill: var(--text-color-translucent);
+    stroke: var(--text-color-ight);
 }
 h2 {
     margin-top: 5vh;
@@ -124,15 +168,31 @@ h2 {
     margin-top: 20px;
     color: var(--text-color);
     text-decoration: none;
-    border: 1px solid;
+    border: 2px solid;
     border-image: var(--color-gradient) 1;
     padding: 10px 20px;
     transition: 0.3s ease;
+    text-shadow: 0 0 10px black;
 }
 .back-link:hover {
-    background: var(--color-gradient);
+    background: var(--color-gradient-dark);
     color: var(--hover-color-header);
-    border: 0;
+}
+.cycle-projects {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    border: 2px solid;
+    border-color: var(--text-color);
+    padding: 10px 20px;
+    transition: 0.3s ease;
+    text-shadow: 0 0 10px black;
+}
+.cycle-projects:hover {
+    background: var(--text-color-translucent);
+    color: #fff;
+    
 }
 .portfolio-link:link {
     color: var(--colour-accent-one);
