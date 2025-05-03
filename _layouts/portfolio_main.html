@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mara Schmid - Game Developer Portfolio</title>
-    <link rel = "stylesheet" href = "color_names.css">
-    <link rel = "stylesheet" href = "stylesheet.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ces7hdw.css">
+    <link rel = "stylesheet" href = "{{ site.baseurl }}/assets/color_names.css">
+    <link rel = "stylesheet" href = "{{ site.baseurl }}/assets/stylesheet.css">
 </head>
 <body>
-    <header>
+    <header class="portfolio-header">
         <div id="particles-js"></div>
         <div class="header-content">
             <img src="./Me.png" alt="Me" style="height: 40vh; image-rendering: pixelated;">
@@ -18,7 +19,7 @@
             </div>
         </div>
     </header>
-    <main>
+    <main>  
         <div class="content-wrapper">
             <section id="about">
                 <h2>About Me</h2>
@@ -93,145 +94,38 @@
                     </div>
                 </div>
             </section>
+            <div class="content-separator"></div>
             <section id="projects">
                 <h2>Projects</h2>
-                <h3 class="projecttype">University Projects</h3>
-                <div class="projectscontainer">
-                <a href="catnip.html" class="project">
-                    <div>
-                        <img src="./projects/catnip/Catnip A2.png" alt="Catnip">
-                    </div>
-                    <h3>Catnip</h3>
-                    <p>
-                        A 2D platformer where players play as a cat trying to push as many things as possible off of furniture.
-                        Developed using C# and SFML.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">MMP1</span>
-                        <span class="tag">Bachelor</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">SFML</span>
-                        <span class="tag">2D</span>
-                    </div>
-                </a>
-                <a href="chairy_madness.html" class="project">
-                    <img src="./projects/chairy_madness/chairy_madness_tower.jpeg" alt="Chairy Madness">
-                    <h3>Chairy Madness</h3>
-                    <p>
-                        A two-player local PvP game, where players compete in stacking chairs as high as possible by flinging them at the chair tower. 
-                        Created using C++ and SFML.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">MMP2a</span>
-                        <span class="tag">Bachelor</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">SFML</span>
-                        <span class="tag">2D</span>
-                    </div>
-                </a>
-                <a href="pantastic_wizard.html" class="project">
-                    <img src="./projects/wizard_pan/wizard_thumbnail.png" alt="Pan-Tastic Wizard Adventures">
-                    <h3>Pan-Tastic Wizard Adventures</h3>
-                    <p>
-                        A single player platformer, where players are a wizard using a pan to brew spells from different ingredients to cast them at enemies. 
-                        Built using Unity Engine and C#.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">MMP2b</span>
-                        <span class="tag">Bachelor</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">2D</span>
-                    </div>
-                </a>
-                <a href="hildeguard.html" class="project">
-                    <img src="./projects/hildeguard/Hildeguard_MonasteryMadness_PosterA1.png" alt="Hildeguard">
-                    <h3>Hildeguard</h3>
-                    <p>
-                        A tower defense game where players have to protect a relic from enemy units by assigning units to rooms and controlling them. 
-                        Made with Unity Engine and C#.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">MMP3</span>
-                        <span class="tag">Bachelor</span>
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">3D</span>
-                    </div>
-                </a>
-                <a href="starfreight_titan.html" class="project">
-                    <img src="./projects/space_game/attacker_foggy.png" alt="SpaceGame">
-                    <h3>WIP - Starfreight Titan</h3>
-                    <p>
-                        Starfreight Titan is a 2 player coop network multiplayer game, where the two players collaborate 
-                        to protet a mining ship.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">MP1</span>
-                        <span class="tag">Master</span>
-                        <span class="tag">Unreal Engine</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">3D</span>
-                    </div>
-                </a>
-                </div>
-                <h3 class="projecttype">Gamejams</h3>
-                <div class="projectscontainer">
-                <a href="pumpkins.html" class="project">
-                    <img src="./projects/pumpkins/PumpKins_InGame.png" alt="PumpKins">
-                    <h3>PumpKins</h3>
-                    <p>
-                        A small whack-a-mole like rythm game where players have to save their pumpkins from ghost mice. 
-                        Created using Unity Engine and C#.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">2D</span>
-                    </div>
-                </a>
-                <a href="trenchcoat.html" class="project">
-                    <img src="./projects/Trenchcoat/Trenchcoat_Cats.png" alt="PumpKins">
-                    <h3>Trenchc(o)at</h3>
-                    <p>
-                        A small game jam game where three players collaborate as cats going grocery shopping undercover. 
-                        Made in Unity Engine 6 and C#.
-                    </p>
-                    <div class="tags">
-                        <span class="tag">Unity</span>
-                        <span class="tag">C#</span>
-                        <span class="tag">2D</span>
-                    </div>
-                </a>
-            </div>
+                    {% assign all_projects = site.projects | where_exp: "item", "item.order != nil" | sort: "order" %}
+                    {% assign type_order = "University,Gamejam" | split: "," %}
+
+                    {% for type in type_order %}
+                        {% assign filtered = all_projects | where: "projecttype", type %}
+                        {% if filtered.size > 0 %}
+                        <h3 class="projecttype">{{ type }} Projects</h3>
+                        <div class="projectscontainer">
+                            {% for project in filtered %}
+                            <a href="{{ project.url | relative_url }}" class="project">
+                                <div>
+                                    <img src="/{{ project.image_base }}{{ project.thumbnail }}" alt="{{ project.title }}">
+                                </div>
+                                <h3>{{ project.title }}</h3>
+                                <p>{{ project.excerpt | strip_html | truncate: 160 }}</p>
+                                <div class="tags">
+                                    {% for tag in project.tags %}
+                                    <span class="tag"><p>{{ tag }}</p></span>
+                                    {% endfor %}
+                                </div>
+                            </a>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    {% endfor %}
             </section>
+            <div class="content-separator"></div>
             <section id="contact">
                 <h2>Contact</h2>
-                <div class="terminal-form" style="background-color: black;">
-                    <div style="background-color: var(--background-lighter); padding-left: 5px;">
-                        <p>Contact me</p>
-                    </div>
-                    <div style="padding: 10px;">
-                        <p>> Welcome to my contact terminal!</p>
-                        <p>> Please enter your details to contact me here</p>
-                        <p>>_</p>
-                        <form action="mailto:mara.schmid@sbg.at" method="post" enctype="text/plain">
-                            <div>
-                                <label for="name">> Name:</label><br>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div>
-                                <label for="email">> Email:</label><br>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div>
-                                <label for="message">> Message:</label><br>
-                                <textarea id="message" name="message" required></textarea>
-                            </div>
-                            <button type="submit" class="white_btn">SEND_MESSAGE</button>
-                        </form>
-                    </div>
-                </div>
                 <div class="contactcontainer">
                     <a href="mailto:mara.schmid@sbg.at">
                         <div title="Mail">

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - Mara Schmid</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ces7hdw.css">
+    <link rel = "stylesheet" href = "{{ site.url }}/assets/color_names.css">
+    <link rel = "stylesheet" href = "{{ site.url }}/assets/project_stylesheet.css">
+    <link rel="stylesheet" href="{{ site.url }}/assets/prism.css">
+</head>
+<body>
+    <header>
+        <div id="particles-js"></div>
+        <div class="header_items">
+            {% assign sorted_projects = site.projects | sort: "order" %}
+            {% assign project_count = sorted_projects | size %}
+            {% assign prev_project = nil %}
+            {% assign next_project = nil %}
+        
+            {% for proj in sorted_projects %}
+            {% if proj.url == page.url %}
+                {% assign current_index = forloop.index0 %}
+            {% endif %}
+            {% endfor %}
+        
+            {% assign prev_index = current_index | minus: 1 %}
+            {% assign next_index = current_index | plus: 1 %}
+        
+            {% if prev_index < 0 %}
+            {% assign prev_index = project_count | minus: 1 %}
+            {% endif %}
+        
+            {% if next_index >= project_count %}
+            {% assign next_index = 0 %}
+            {% endif %}
+        
+            {% assign prev_project = sorted_projects[prev_index] %}
+            {% assign next_project = sorted_projects[next_index] %}
+        
+            <div class="prevbtn">
+            <a href="{{ prev_project.url }}" class="cycle-projects">&#8592; Prev Project</a>
+            </div>
+            <div class="projectname">
+            <h1>{{ page.title }}</h1>
+            </div>
+            <div class="nextbtn">
+            <a href="{{ next_project.url }}" class="cycle-projects">Next Project &#8594;</a>
+            </div>
+        </div>
+        <div id="particles-js">
+    </header>
+    <main>
+        <div class="content-wrapper">
+            <div class="carousel" aria-label="Project screenshots">
+                <div class="carousel-inner">
+                    {% for image in page.images %}
+                        <div class="carousel-item">
+                            <img src="/{{site.baseurl}}{{ page.image_base }}{{ image.file }}" alt="{{ image.alt }}">
+                        </div>
+                    {% endfor %}
+                </div>
+                <svg height="60" width="50" class="carousel-control prev" xmlns:xlink="#">
+                    <a xlink:href="#" aria-label="Previous screenshot"></a>
+                    <polygon points="45,5 5,30 45,55"/>
+                </svg>
+                <svg height="60" width="50" class="carousel-control next" xmlns:xlink="#">
+                    <a xlink:href="#" aria-label="Next screenshot"></a>
+                    <polygon points="5,5 45,30 5,55"/>
+                </svg>
+            </div>
+            
+            {{ content }}
+
+            <div style="display: grid; grid-template-columns: auto auto;">
+                <div style="grid-row-start: span 2;">
+                    <a href="/" class="back-link" style="float: left;">&#8592; Back to Main Page</a>
+                </div>
+                {% if page.fhpage and page.itchpage %}
+                <div>
+                    <a href="{{ page.fhpage }}" class="back-link" style="float: right;">View on FH Portfolio Page</a>
+                </div>
+                <div>
+                    <a href="{{ page.itchpage }}" class="back-link" style="float: right;">Play on Itch.io</a>
+                </div>
+                {% elsif page.fhpage %}
+                <div>
+                    <a href="{{ page.fhpage }}" class="back-link" style="float: right;">View on FH Portfolio Page &#8594;</a>
+                </div>
+                {% elsif page.itchpage %}
+                <div>
+                  <a href="{{ page.itchpage }}" class="back-link" style="float: right;">Play on Itch.io &#8594;</a>
+                </div>
+                {% endif %}
+              </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        const carousel = document.querySelector('.carousel-inner');
+        const items = carousel.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        document.querySelector('.carousel-control.next').addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = (currentIndex + 1) % items.length;
+            updateCarousel();
+        });
+
+        document.querySelector('.carousel-control.prev').addEventListener('click', (e) => {
+            e.preventDefault();
+            currentIndex = (currentIndex - 1 + items.length) % items.length;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/script.js"></script>
+</body>
+</html>
