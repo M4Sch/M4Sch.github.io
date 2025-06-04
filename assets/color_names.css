@@ -20,6 +20,12 @@
     --icon-size-large: 55px;
     --border-radius-sharp: 5px;
     --border-radius-round: 15px;
+
+    --border-radius-hide: 15px;
+    --pixel-border-slice: 30; /*60 or 30?  OR 75*/
+    --pixel-border-image-width: 9px;
+    --pixel-border-image-repeat: stretch;
+    --pixel-border-image-path: url('./images/Buttons/Color_Btn_Medium_Thin.png');
     --transition-speed: 0.3s;
     
     --colour-accent-one: #40bbb5;

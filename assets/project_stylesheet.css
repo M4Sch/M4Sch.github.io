@@ -95,7 +95,7 @@ header::after {
     background:  var(--color-gradient);
 }
 main {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -138,9 +138,6 @@ h1 {
     
     filter: drop-shadow(0 0px 20px black);
     
-    stroke: var(--text-color-ight);
-    stroke-width: 3px;
-    stroke-linejoin: none;
     paint-order: fill;
 }
 .carousel-control:hover {
@@ -150,19 +147,17 @@ h1 {
     transform: translateY(-50%);
 }
 .carousel-control.prev {
-    left: 10px;
-    fill: var(--text-color-translucent);
-    stroke: var(--text-color-ight);
+    left: 20px;
+    fill: var(--text-color-ight);
 }
 .carousel-control.next {
-    right: 10px;
-    fill: var(--text-color-translucent);
-    stroke: var(--text-color-ight);
+    right: 20px;
+    fill: var(--text-color-ight);
 }
 h2 {
     margin-top: 5vh;
     color: #ddd;
-    border-bottom: 1px solid;
+    border-bottom: 3px solid;
     border-image: var(--color-gradient) 1;
     padding-bottom: -2px;
 }
@@ -173,12 +168,19 @@ h2 {
     text-decoration: none;
     border: 2px solid;
     border-image: var(--color-gradient) 1;
+    border-radius: var(--border-radius-sharp);
     padding: 10px 20px;
     transition: 0.3s ease;
     text-shadow: 0 0 10px black;
+
+    border: var(--pixel-border-image-width) solid transparent;
+    border-radius: var(--border-radius-hide);
+    border-image-source: var(--pixel-border-image-path);
+    border-image-repeat: var(--pixel-border-image-repeat);
+    border-image-slice: var(--pixel-border-slice);
 }
 .back-link:hover {
-    background: var(--color-gradient-dark);
+    background: var(--background-lighter);
     color: var(--hover-color-header);
 }
 .cycle-projects {
@@ -188,9 +190,16 @@ h2 {
     text-decoration: none;
     border: 2px solid;
     border-color: var(--text-color);
+    /*border-radius: var(--border-radius-sharp);*/
     padding: 10px 20px;
     transition: 0.3s ease;
     text-shadow: 0 0 10px black;
+
+    border: var(--pixel-border-image-width) solid transparent;
+    border-radius: var(--border-radius-hide);
+    border-image-source: url('./images/Buttons/White_Btn_Medium_Thin.png');
+    border-image-repeat: var(--pixel-border-image-repeat);
+    border-image-slice: var(--pixel-border-slice);
 }
 .cycle-projects:hover {
     background: var(--text-color-translucent);

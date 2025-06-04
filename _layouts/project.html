@@ -60,14 +60,22 @@
                         </div>
                     {% endfor %}
                 </div>
-                <svg height="60" width="50" class="carousel-control prev" xmlns:xlink="#">
+                <svg viewbox="0 0 80 80" height="60" class="carousel-control prev" xmlns:xlink="#">
+                    <a xlink:href="#" aria-label="Previous screenshot"></a>
+                    <polygon points="75,25 45,25 45,5 35,5 35,15 25,15  25,25 15,25 15,35 5,35 5,45 15,45 15,55 25,55 25,65 35,65 35,75 45,75 45,55 75,55"/>
+                </svg>
+                <svg viewbox="0 0 80 80" height="60" class="carousel-control next" xmlns:xlink="#">
+                    <a xlink:href="#" aria-label="Next screenshot"></a>
+                    <polygon points="5,25 35,25 35,5 45,5 45,15 55,15 55,25 65,25 65,35 75,35 75,45 65,45 65,55 55,55 55,65 45,65 45,75 35,75 35,55 5,55"/>
+                </svg>
+                <!---<svg height="60" width="50" class="carousel-control prev" xmlns:xlink="#">
                     <a xlink:href="#" aria-label="Previous screenshot"></a>
                     <polygon points="45,5 5,30 45,55"/>
                 </svg>
                 <svg height="60" width="50" class="carousel-control next" xmlns:xlink="#">
                     <a xlink:href="#" aria-label="Next screenshot"></a>
                     <polygon points="5,5 45,30 5,55"/>
-                </svg>
+                </svg>--->
             </div>
             
             {{ content }}
@@ -76,20 +84,20 @@
                 <div style="grid-row-start: span 2;">
                     <a href="/" class="back-link" style="float: left;">&#8592; Back to Main Page</a>
                 </div>
-                {% if page.fhpage and page.itchpage %}
-                <div>
-                    <a href="{{ page.fhpage }}" class="back-link" style="float: right;">View on FH Portfolio Page</a>
-                </div>
-                <div>
-                    <a href="{{ page.itchpage }}" class="back-link" style="float: right;">Play on Itch.io</a>
-                </div>
-                {% elsif page.fhpage %}
+                
+                {% if page.fhpage %}
                 <div>
                     <a href="{{ page.fhpage }}" class="back-link" style="float: right;">View on FH Portfolio Page &#8594;</a>
                 </div>
-                {% elsif page.itchpage %}
+                {% endif %}
+                {% if page.itchpage %}
                 <div>
                   <a href="{{ page.itchpage }}" class="back-link" style="float: right;">Play on Itch.io &#8594;</a>
+                </div>
+                {% endif %}
+                {% if page.crpage %}
+                <div>
+                  <a href="{{ page.crpage }}" class="back-link" style="float: right;">View Creativity Rules Website &#8594;</a>
                 </div>
                 {% endif %}
               </div>
