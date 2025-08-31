@@ -28,7 +28,7 @@ images:
 fhpage: https://portfolio.fh-salzburg.ac.at/projects/2025-starfreight-titan
 crpage: https://creativity-rules.at/projects/idy7rpu6mam03tja4c91zfys
 prev: ../hildeguard
-next: ../pumpkins
+next: ../echo_room
 tags: [MP1, Master, Unreal Engine, C++, 3D]
 order: 5
 projecttype: University

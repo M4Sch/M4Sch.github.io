@@ -1,3 +1,3 @@
 ---
-layout: portfolio_main
+layout: portfolio_main_alt
 ---
