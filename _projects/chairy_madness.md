@@ -51,3 +51,12 @@ This game was made in a bit over 2 weeks in a team effort, using C++ and SFML. T
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/joakim-misic" class="portfolio-link">Joakim Misic</a> Programming</li>
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/mara-daliah-schmid" class="portfolio-link">Mara Schmid</a> Programming</li>
 </ul>
+
+
+
+<style scoped>
+*{
+  --col-1: #feed00;
+  --col-2: #fcf176;
+}
+</style>

@@ -77,3 +77,13 @@ Starfreight Titan is the first project from my master's studies.
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/piet-josef-koller" class="portfolio-link">Piet Koller</a> Programming</li>
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/mara-daliah-schmid" class="portfolio-link">Mara Schmid</a> Programming</li>
 </ul>
+
+
+
+
+<style scoped>
+*{
+  --col-1: #f9dc4a;
+  --col-2: #f9dc4a;
+}
+</style>

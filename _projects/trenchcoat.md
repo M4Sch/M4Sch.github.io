@@ -62,3 +62,11 @@ Trenchc(o)at was created during a 48 hour game jam at the FH Salzburg, the 11th 
     <li>Kilian Programming</li>
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/mara-daliah-schmid" class="portfolio-link">Mara Schmid</a> Programming</li>
 </ul>
+
+
+<style scoped>
+*{
+  --col-1: #e3d4c7;
+  --col-2: #cbb7a5;
+}
+</style>

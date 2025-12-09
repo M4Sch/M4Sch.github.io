@@ -52,3 +52,10 @@ PumpKins was created during a 2 day gamejam at the FH Salzburg.
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/mara-daliah-schmid" class="portfolio-link">Mara Schmid</a> Programming</li>
     <li>+1 Programmer</li>
 </ul>
+
+<style scoped>
+*{
+  --col-1: #f97743;
+  --col-2: #e1abc3;
+}
+</style>

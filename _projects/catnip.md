@@ -47,3 +47,12 @@ The assets, except for the font, were created by me.
 <ul>
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/mara-daliah-schmid" class="portfolio-link">Mara Schmid</a> Programming</li>
 </ul>
+
+
+
+<style scoped>
+*{
+  --col-1: #d4ffbb;
+  --col-2: #fff69b;
+}
+</style>

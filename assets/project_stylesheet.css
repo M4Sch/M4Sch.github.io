@@ -207,8 +207,8 @@ h2 {
     
 }
 .portfolio-link:link {
-    color: var(--colour-accent-one);
+    color: var(--col-1);
 }
 .portfolio-link:visited {
-    color: var(--colour-accent-two);
+    color: var(--col-2);
 }

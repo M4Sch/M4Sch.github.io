@@ -50,3 +50,12 @@ who are linked in the Team section.
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/piet-josef-koller" class="portfolio-link">Piet Koller</a> Programming</li>
     <li><a href="https://portfolio.fh-salzburg.ac.at/users/mara-daliah-schmid" class="portfolio-link">Mara Schmid</a> Programming</li>
 </ul>
+
+
+
+<style scoped>
+*{
+  --col-1: #759bfcff;
+  --col-2: #b561dcff;
+}
+</style>
