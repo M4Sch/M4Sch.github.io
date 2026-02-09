@@ -70,23 +70,25 @@
                             {% assign all_projects = site.projects | where_exp: "item", "item.order != nil" | sort: "order" %}
                                     {% for project in all_projects %}
                                     <div class="project-card">
-                                        <a href="{{ project.url | relative_url }}">
-                                            <div class="image-container">
-                                                <img src="/{{ project.image_base }}{{ project.thumbnail }}" alt="{{ project.title }}">
-                                                {% for image in project.images offset:2 limit:2 %}
-                                                <img src="/{{ project.image_base }}{{ image.file }}" alt="{{ image.alt }}">
-                                                {% endfor %}
-                                            </div>
-                                            <h1>{{ project.title }}</h1>
-                                            <div id="tag-container">
-                                                <div class="tags">
-                                                    {% for tag in project.tags %}
-                                                    <span class="tag"><p>{{ tag }}</p></span>
+                                        <div style="margin: 10px;">
+                                            <a href="{{ project.url | relative_url }}">
+                                                <div class="image-container">
+                                                    <img src="/{{ project.image_base }}{{ project.thumbnail }}" alt="{{ project.title }}">
+                                                    {% for image in project.images offset:2 limit:2 %}
+                                                    <img src="/{{ project.image_base }}{{ image.file }}" alt="{{ image.alt }}">
                                                     {% endfor %}
                                                 </div>
-                                            </div>
-                                            <p>{{ project.excerpt | truncatewords: 100 }}</p>
-                                        </a>
+                                                <h1>{{ project.title }}</h1>
+                                                <div id="tag-container">
+                                                    <div class="tags">
+                                                        {% for tag in project.tags %}
+                                                        <span class="tag"><p>{{ tag }}</p></span>
+                                                        {% endfor %}
+                                                    </div>
+                                                </div>
+                                                <p>{{ project.excerpt | truncatewords: 100 }}</p>
+                                            </a>
+                                        </div>
                                     </div>
                                     {% endfor %}
                         </div>

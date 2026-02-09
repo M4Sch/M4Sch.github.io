@@ -5,10 +5,6 @@ image_base: assets/images/echo-room/
 images:
   - file: EchoRoom_Thumbnail.jpg
     alt: Thumbnail
-  - file: Main_Menu.jpg
-    alt: Menu
-  - file: Controls.jpg
-    alt: Controls
   - file: Mirror_Room_Day.jpg
     alt: Day
   - file: Mirror_Room_Night.jpg
@@ -21,6 +17,10 @@ images:
     alt: Another puzzle, on a desk
   - file: Puzzle_Trophies.jpg
     alt: Another Puzzle, using shadows and item rotation
+  - file: Main_Menu.jpg
+    alt: Menu
+  - file: Controls.jpg
+    alt: Controls
 fhpage: https://portfolio.fh-salzburg.ac.at/projects/2025-echo-room
 itchpage: https://aluminumalloy.itch.io/echo-room
 prev: ../starfreight_titan

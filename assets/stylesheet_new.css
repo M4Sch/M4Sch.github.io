@@ -133,6 +133,7 @@ body
 {
     --cutout: 10px;
     min-width: calc(100% - calc(var(--cutout) * 2));
+    width: 70%;
     background-color: var(--dark-4);
     clip-path: var(--cutout-rect-2);
     margin: var(--cutout);
@@ -602,6 +603,7 @@ body
         }
 
         padding-top: 50px;
+        margin-bottom: 20vh;
     }
 
     .content-text
@@ -667,13 +669,13 @@ footer
 
 .content-slider
 {
-    --slider-width: 70%;
-    --slider-height: 80vh;
-    background-color: var(--dark-2);
+    --slider-width: 100%;
+    --slider-height: fit-content;
+    /*background-color: var(--dark-2);*/
     width: var(--slider-width);
     min-height: 300px;
     height: var(--slider-height);
-    margin: 0 auto 0 auto;
+    margin: 2vw auto 0 auto;
     text-align: center;
 
     overflow: hidden;
