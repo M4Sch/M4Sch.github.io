@@ -254,10 +254,13 @@ body
 }
 .arrow-container
 {
+    display: block;
+    width: fit-content;
     height: min-content;
     position: relative;
     margin-top: 2em;
     margin-bottom: 0;
+    margin: 10px auto;
 }
 .arrow
 {
@@ -670,7 +673,7 @@ footer
     width: var(--slider-width);
     min-height: 300px;
     height: var(--slider-height);
-    margin: 0 auto 20vh auto;
+    margin: 0 auto 0 auto;
     text-align: center;
 
     overflow: hidden;
