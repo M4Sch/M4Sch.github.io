@@ -669,7 +669,7 @@ footer
 
 .content-slider
 {
-    --slider-width: 100%;
+    --slider-width: 70%;
     --slider-height: fit-content;
     /*background-color: var(--dark-2);*/
     width: var(--slider-width);
@@ -682,7 +682,6 @@ footer
 
     --cutout: 10px;
 
-    clip-path: var(--cutout-rect-2);
 }
 
 .aboutcontainer
@@ -895,6 +894,7 @@ footer
     {
         display: flex;
         flex-wrap: wrap;
+        justify-content: left;
         gap: 5px;
         margin-top: 10px;
     }
