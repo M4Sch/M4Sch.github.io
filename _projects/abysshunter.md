@@ -13,7 +13,7 @@ images:
     alt: Environment
 itchpage: https://aluminumalloy.itch.io/abyss-hunter
 prev: projects.trenchcoat
-next: chairy_madness
+next: projects.echo_room
 tags: [Master, C++, Unreal Engine, Blueprints, 3D]
 order: 9
 projecttype: Gamejam
