@@ -32,8 +32,6 @@ thumbnail: EchoRoom_Thumbnail.jpg
 ---
 
 ## About the Project
-Echo Room is a story driven puzzle game, made in collaboration with students from RVE and MMA.
-
 Echo Room is a story-driven mystery puzzle game built in Unreal Engine 5.6 that takes place within two versions of the same room. The player moves between them by stepping through a mirror, switching from one space to its mirrored counterpart.
 
 The core interaction revolves around picking up, inspecting, and sorting objects. Items can be examined closely to reveal symbols and figure out the part they play in solving a puzzle. By listening closely to the main character voicing their inner monologue out loud, players can identify an item’s place in the game world and its purpose in one of the various puzzles. Sorting objects into the correct places gradually uncovers the underlying connection between the mirrored spaces.

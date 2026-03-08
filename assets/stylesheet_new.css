@@ -602,7 +602,7 @@ body
             text-align: center;
         }
 
-        padding-top: 50px;
+        padding-top: 5px;
         margin-bottom: 20vh;
     }
 
@@ -675,7 +675,7 @@ footer
     width: var(--slider-width);
     min-height: 300px;
     height: var(--slider-height);
-    margin: 2vw auto 0 auto;
+    margin: 1vw auto 0 auto;
     text-align: center;
 
     overflow: hidden;

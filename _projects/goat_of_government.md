@@ -28,8 +28,9 @@ GOAT of Government: A Very Hooficial Business is a small highscore game, where t
 
 ## Key Features
 <ul>
-    <li>ranged and melee enemies</li>
-    <li>defeat enemies by cutting their strings</li>
+    <li>pooled documents defined using different scriptable objects</li>
+    <li>goat can be fed documents, and regurgitate one document per round</li>
+    <li>each document contains a regular text, a less impactful text, a score for its influence on public opinion and the headline the document makes</li>
 </ul>
 
 ## Development Process
