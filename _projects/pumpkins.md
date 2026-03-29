@@ -54,8 +54,12 @@ PumpKins was created during a 2 day gamejam at the FH Salzburg.
 </ul>
 
 <style scoped>
-*{
+.dark-theme{
   --col-1: #f97743;
   --col-2: #e1abc3;
+}
+.light-theme{
+  --col-1: #ad512b;
+  --col-2: #594f7b;
 }
 </style>

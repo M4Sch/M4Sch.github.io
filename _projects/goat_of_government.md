@@ -1,6 +1,7 @@
 ---
 layout: project
-title: GOAT of Government - A Very Hooficial Business
+title: GOAT of Government
+secondarytitle: ' - A Very Hooficial Business'
 image_base: assets/images/goat_of_gov/
 images:
   - file: StartMenu.png

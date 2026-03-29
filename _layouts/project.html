@@ -13,7 +13,10 @@
     <main>
         <!-- Side navigation -->
         <div class="side-nav-bar">
-            <img src="/{{site.baseurl}}{{ page.image_base }}{{ page.thumbnail }}" alt="{{ page.title }}">
+            <button id="theme-toggle" type="button" onclick="themeToggle()"></button>
+            <div id="theme" style="visibility: collapse;"></div>
+            
+            <img src="/{{site.baseurl}}{{ page.image_base }}{{ page.thumbnail }}" alt="{{ page.title }}" style="margin-top: 30px;">
             <div class="side-nav-text">
                 <h1>{{ page.title }}</h1>
                 <div id="tag-container">
@@ -75,7 +78,7 @@
             <div class="content-wrapper">
                 <div id="project-info-container">
                     <div class="content-text">
-                        <h1>{{ page.title }}</h1>
+                        <h1>{{ page.title }}{{page.secondarytitle}}</h1>
                         {{ content }}
                     </div>
                     
@@ -100,5 +103,6 @@
             <div><p>Icons by <a href="https://icons8.com/">Icons8</a></p></div>
         </div>
     </footer>
+    <script type="text/javascript" src="{{ site.baseurl }}/theme.js"></script>
 </body>
 </html>

@@ -10,9 +10,12 @@
 <body>
     <header class="portfolio-header">
     </header>
-    <main> 
+    <main>
         <!-- Side navigation -->
         <div class="side-nav-bar">
+            <button id="theme-toggle" type="button" onclick="themeToggle()"></button>
+            <div id="theme" style="visibility: collapse;"></div>
+
             <img src="./Me.png" alt="Me">
             <div class="side-nav-text">
                 <h1>Hi, I'm Mara Schmid!</h1>
@@ -74,7 +77,7 @@
                                             <a href="{{ project.url | relative_url }}">
                                                 <div class="image-container">
                                                     <img src="/{{ project.image_base }}{{ project.thumbnail }}" alt="{{ project.title }}">
-                                                    {% for image in project.images offset:2 limit:2 %}
+                                                    {% for image in project.images offset:1 limit:3 %}
                                                     <img src="/{{ project.image_base }}{{ image.file }}" alt="{{ image.alt }}">
                                                     {% endfor %}
                                                 </div>
@@ -113,7 +116,6 @@
                         </p>
                         <h3>Skills</h3>
                         <div class="skills">
-                            <div><div><p>Project Management</p></div></div>
                             <div><div><p>Software Development</p></div></div>
                             <div><div><p>Game Development</p></div></div>
                             <div><div><p>Programming</p></div></div>
@@ -256,33 +258,94 @@
         const carousel = document.querySelector('.project-view-container');
         const items = carousel.querySelectorAll('.project-card');
         let currentIndex = 0;
+        let directionForward = true;
+        let automaticIntervalDuration = 7000;
+        let refreshIntervalID = setInterval(nextSlide, automaticIntervalDuration);
 
-        document.querySelector('#rightarrow').addEventListener('click', (e) => {
-            e.preventDefault();
+        const rArrow = document.querySelector('#rightarrow');
+        const lArrow = document.querySelector('#leftarrow');
+
+        rArrow.addEventListener('click', (e) => {
             nextSlide();
         });
+        rArrow.addEventListener('mouseenter', (e) => {
+            pauseSlider();
+        })
+        rArrow.addEventListener('mouseleave', (e) => {
+            resumeSlider();
+        })
 
-        document.querySelector('#leftarrow').addEventListener('click', (e) => {
-            e.preventDefault();
+        lArrow.addEventListener('click', (e) => {
             prevSlide();
         });
+        lArrow.addEventListener('mouseenter', (e) => {
+            pauseSlider();
+        })
+        lArrow.addEventListener('mouseleave', (e) => {
+            resumeSlider();
+        })
+
+        carousel.addEventListener('mouseenter', (e) => {
+            pauseSlider();
+        })
+        carousel.addEventListener('mouseleave', (e) => {
+            resumeSlider();
+        })
+
+        function pauseSlider()
+        {
+            clearInterval(refreshIntervalID);
+        }
+        function resumeSlider()
+        {
+            if (directionForward)
+            {
+                refreshIntervalID = setInterval(nextSlide, automaticIntervalDuration);
+            }
+            else
+            {
+                refreshIntervalID = setInterval(prevSlide, automaticIntervalDuration);
+            }
+        }
 
         function nextSlide() {
             currentIndex = (currentIndex + 1) % items.length;
-            updateCarousel();
+            updateCarousel(true);
         }
 
         function prevSlide() {
             currentIndex = (currentIndex - 1 + items.length) % items.length;
-            updateCarousel();
+            updateCarousel(false);
         }
 
-        function updateCarousel() {
+        function updateCarousel(forward = true) {
             carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            directionForward = forward;
+            
+            clearInterval(refreshIntervalID);
+            //console.log("current index = " + currentIndex);
+            if (currentIndex+1 == items.length) {
+                directionForward = false;
+            }
+            if (currentIndex == 0) {
+                directionForward = true;
+            }
+
+            if(!carousel.matches(':hover') && !lArrow.matches(':hover') && !rArrow.matches(':hover'))
+            {
+                if (directionForward)
+                {
+                    refreshIntervalID = setInterval(nextSlide, automaticIntervalDuration);
+                }
+                else
+                {
+                    refreshIntervalID = setInterval(prevSlide, automaticIntervalDuration);
+                }
+            }
         }
 
-        setInterval(nextSlide, 7000);
     </script>
-
+    <script type="text/javascript" src="{{ site.baseurl }}/theme.js"></script>
 </body>
 </html>

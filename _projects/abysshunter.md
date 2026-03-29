@@ -54,8 +54,13 @@ For this project, I implemented the enemy logic using behaviour trees.
 
 
 <style scoped>
-*{
+.dark-theme{
   --col-1: #d2b0f8;
   --col-2: #fefefe;
 }
+.light-theme{
+  --col-1: #d2b0f8;
+  --col-2: #891ff7;
+}
+
 </style>

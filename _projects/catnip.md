@@ -51,8 +51,13 @@ The assets, except for the font, were created by me.
 
 
 <style scoped>
-*{
+.dark-theme
+{
   --col-1: #d4ffbb;
   --col-2: #fff69b;
+}
+.light-theme{
+  --col-1: #83bb63;
+  --col-2: #e9d92f;
 }
 </style>

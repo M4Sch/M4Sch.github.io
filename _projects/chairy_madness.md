@@ -55,8 +55,12 @@ This game was made in a bit over 2 weeks in a team effort, using C++ and SFML. T
 
 
 <style scoped>
-*{
+.dark-theme{
   --col-1: #feed00;
   --col-2: #fcf176;
+}
+.light-theme{
+  --col-1: #cf3129;
+  --col-2: #cf3129;
 }
 </style>
